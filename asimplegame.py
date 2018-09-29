@@ -12,10 +12,13 @@ class BertrandGame:
 		elif p1 > p2:
 			return [0, self.marketSize]
 		else:
-			half = makretSize / 2
+			half = marketSize / 2
 			return [half, half]
 
 	def profit(self, p1, p2, q1, q2):
 		return [q1 * (p1 - self.costs), q2 * (p2 - self.costs)]
+
+	def createMatrix(self):
+		matrix = [[0] * len(self.players[0].strategies) for i in self.players]
 
 
